@@ -1,1 +1,77 @@
-Hello World
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Autofill Wallet Test</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // Create a basic FillCardOnlyForm
+        var FillCardOnlyForm = function() {
+            var form = document.forms['form1'];
+            form['loyalty_card'].value = '77190205173010428';     
+        }
+
+        // Create a basic Profile
+        var FillSignInForm = function() {
+            var form2 = document.forms['form2'];
+            form2['email_member_number'].value = '17550605673512428';     
+            form2['password'].value = 'passwordtest';
+        }
+        </script>
+    <style>
+    td
+    {
+        padding:0 35px;
+    }
+
+    label {
+    display: inline-block;
+    width: 180px;
+    text-align: left;
+    }
+
+    input {
+    width: 200px;
+    }
+
+    input[type="reset"] {
+        width: auto;
+    }
+
+    </style>
+  </head>
+  <body>
+  <p><em>Beware what you post. All forms send data to https://romantic-dirt-jaguar.glitch.me/post.</em> That website is managed by vizcay@ and ignores all data.</p>
+  <br>
+
+  <h3>Loyalty Card only</h3>
+
+<form name="addr1.1" id="form1" action="https://romantic-dirt-jaguar.glitch.me/post" method="post">
+  <label for="loyalty_card">Loyalty Card: </label>
+  <input type="text" id="loyalty_card" name="loyalty_card"><br>
+  <br>
+  <input type="reset" value="Reset">
+  <button type="button" onclick="FillCardOnlyForm()">Fill Form</button>
+</form>
+
+<br>
+
+<hr>
+  <h3>Email or Member Number / Password</h3>
+  <form name="np" id="form2" action="https://romantic-dirt-jaguar.glitch.me/post" method="post">
+  <label for="email_member_number">Email or Member Number:</label>
+  <input type="text" name="email_member_number" id="email_member_number"><br>
+  
+  <label for="password">Password:  </label>
+  <input type="password" name="password" id="password"><br>
+  <input type="reset" value="Reset">
+  <button type="button" onclick="FillSignInForm()">Fill Form</button>
+  </form>
+
+<br>
+
+</p>
+</hr>
+
+
+</body></html>
